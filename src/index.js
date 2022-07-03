@@ -60,7 +60,7 @@ app.delete("/repositories/:id", (request, response) => {
 
   const repositoryExists = repositories.some(repository => repository.id ===id)
   if(!repositoryExists){
-    return response.status(404).json({ error: "repository not found"})
+    return response.status(404).json({ error: "repository not found"});
   }
 
   repositories.splice(repositoryIndex, 1);
